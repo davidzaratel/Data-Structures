@@ -1,5 +1,6 @@
 //By David Zárate López
 //Program designed to store numbers in linked list
+//Last modification: 05/07/2021
 #include <iostream>
 
 using namespace std;
@@ -111,13 +112,16 @@ void printList(struct Node *head){
 }
 
 void linearSearch(struct Node *head, int num){
-  //if the list is empty, the program notifies the user
+  //declare a boolean that will determine if the num is found or not
   bool found = false;
+  //if the list is empty, the program notifies the user
   if (head == NULL){
     cout<<endl<<"The linked list is empty"<<endl<<endl;
     return;
   }
+  //if it isn't empty, the list will be traversed
   while(head != NULL){
+    //if the number is found, the boolean will be true
     if (head->data == num)
       found = true;
     head = head->next;
@@ -126,7 +130,6 @@ void linearSearch(struct Node *head, int num){
     cout<<endl<<"The number IS in the list!"<<endl<<endl;
   else
     cout<<endl<<"The number is NOT in the list!"<<endl<<endl;
-
 }
 
 
@@ -134,7 +137,7 @@ int main(){
  struct Node * head = NULL;
  int n = 0, num = 0;
  cout<<"Hi! Welcome to the linked list program"<<endl;
- while (n != 8){
+ while (n != 7){
    cout<<"What would you like to do?"<<endl;
    cout<<"1)Insert at the Beggining"<<endl;
    cout<<"2)Insert at the End"<<endl;
@@ -142,8 +145,7 @@ int main(){
    cout<<"4)Delete at End"<<endl;
    cout<<"5)Print List"<<endl;
    cout<<"6)Linear Search"<<endl;
-   cout<<"7)Binary List"<<endl;
-   cout<<"8)Exit"<<endl;
+   cout<<"7)Exit"<<endl;
    cin>>n;
 
    if (n == 1) {
@@ -167,9 +169,6 @@ int main(){
      cin>>num;
      linearSearch(head,num);
    }
-   if (n == 7)
-      printList(head);
-
  }
  cout<<endl<<"Have a nice day!"<<endl<<endl;
 
