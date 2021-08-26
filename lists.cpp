@@ -144,7 +144,7 @@ int main(){
    cout<<"3)Delete at Beggining"<<endl;
    cout<<"4)Delete at End"<<endl;
    cout<<"5)Print List"<<endl;
-   cout<<"6)Linear Search"<<endl;
+   cout<<"6)Find if a certain value is in the tree"<<endl;
    cout<<"7)Exit"<<endl;
    cin>>n;
 
